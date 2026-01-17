@@ -7,7 +7,7 @@ a,span{
   user-select: none;
 }
 a:visited{
-  color: var(--text-color);
+  color: #000;
 }
 :root {
   --bg-color: linear-gradient(to bottom,#103783, #9bafd9);
