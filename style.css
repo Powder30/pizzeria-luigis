@@ -17,9 +17,7 @@ span {
   --text-color: rgb(255, 123, 0);
   scroll-behavior: smooth;
 }
-a:visited {
-  color: var(--text-color);
-}
+
 body {
   background: var(--bg-color);
   font-family: pizza;
@@ -29,7 +27,9 @@ body {
 .header__nav {
   display: none;
 }
-
+a:visited {
+  color: var(--text-color);
+}
 .main__header {
   display: flex;
   flex-direction: row;
