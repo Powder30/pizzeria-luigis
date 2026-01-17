@@ -83,7 +83,7 @@ body {
   width: 40dvw;
   justify-content: start;
   gap: 2rem;
-  height: 100dvh;
+  height: clamp(100dvh,100%,120dvh);
   position: fixed;
   z-index: 999;
 }
