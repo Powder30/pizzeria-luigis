@@ -7,9 +7,7 @@ a,
 span {
   user-select: none;
 }
-a:visited {
-  color: var(--text-color);
-}
+
 :root {
   --bg-color: linear-gradient(to bottom, #0b0b10, #670f0f, #200b0b);
   --header-color: linear-gradient(transparent, #000);
@@ -18,6 +16,9 @@ a:visited {
   --main-header-color: #670f0f;
   --text-color: rgb(255, 123, 0);
   scroll-behavior: smooth;
+}
+a:visited {
+  color: var(--text-color);
 }
 body {
   background: var(--bg-color);
