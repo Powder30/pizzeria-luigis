@@ -234,7 +234,7 @@ body {
     "header"
     "menu"
     "oferta";
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .header {
   display: flex;
@@ -246,9 +246,9 @@ body {
   padding: 1rem;
   box-shadow: 0 0 30px #000;
   position: relative;
-  z-index: 999;
   text-wrap: balance;
   text-align: center;
+ 
 }
 .header h4 {
   margin: 0.5rem 0;
