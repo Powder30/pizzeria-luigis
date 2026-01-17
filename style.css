@@ -209,7 +209,10 @@ body {
   grid-area:promo4 ;
   padding: 1rem;
 }
-
+.menu-promo{
+  grid-area: oferta;
+  width: 100%;
+}
 
 /*---------pseudo clases hero-------------*/
 
@@ -229,7 +232,8 @@ body {
   grid-template-columns: repeat(fit-content, minmax(100px, 1fr));
   grid-template-areas:
     "header"
-    "menu";
+    "menu"
+    "oferta";
   overflow: hidden;
 }
 .header {
@@ -417,9 +421,6 @@ body {
   .menu{
     grid-area: menu;
     
-  }
-  .menu-promo{
-    grid-area: oferta;
   }
  
   .menu-promo img{
