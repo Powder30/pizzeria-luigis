@@ -382,7 +382,7 @@ body {
       "promo3 promo4 promo2";
     max-width: 1000px;
     gap: 1.5rem;
-    margin: 3rem 1.4rem 0;
+    margin: 3rem 1.4rem 1rem;
     align-self: center;
   }
   .main__promo,
