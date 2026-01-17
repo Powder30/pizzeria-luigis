@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_name=local_pizza,home,logout,menu,shopping_cart,person_raised_hand,settings&display=block"
+      rel="stylesheet"
+    />
+
+    <title>Pizzeria luigi's</title>
+  </head>
+  <body>
+    <header class="main__header">
+      <div class="header_menu">
+        <label class="material-symbols-outlined menu" for="header__checkbox"
+          >menu</label
+        >
+        <input type="checkbox" name="checkbox_menu" id="header__checkbox" />
+      </div>
+      <svg
+        class="header__logo"
+        width="200"
+        height="200"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="100" cy="110" r="85" fill="#FFF9E6" />
+
+        <path
+          d="M100 40 L160 150 Q100 165 40 150 Z"
+          fill="#FFA500"
+          stroke="#D35400"
+          stroke-width="4"
+          stroke-linejoin="round"
+        />
+
+        <path
+          d="M55 140 Q100 152 145 140"
+          fill="none"
+          stroke="#E74C3C"
+          stroke-width="8"
+          stroke-linecap="round"
+        />
+
+        <circle cx="85" cy="115" r="8" fill="#C0392B" />
+        <circle cx="115" cy="130" r="8" fill="#C0392B" />
+        <circle cx="100" cy="85" r="8" fill="#C0392B" />
+
+        <g stroke="#D35400" stroke-width="3" stroke-linecap="round" fill="none">
+          <path d="M85 30 Q75 15 85 5" opacity="0.6">
+            <animate
+              attributeName="d"
+              dur="2s"
+              repeatCount="indefinite"
+              values="M85 30 Q75 15 85 5; M85 30 Q95 15 85 5; M85 30 Q75 15 85 5"
+            />
+          </path>
+          <path d="M105 35 Q95 20 105 10" opacity="0.8">
+            <animate
+              attributeName="d"
+              dur="2.5s"
+              repeatCount="indefinite"
+              values="M105 35 Q95 20 105 10; M105 35 Q115 20 105 10; M105 35 Q95 20 105 10"
+            />
+          </path>
+          <path d="M125 30 Q115 15 125 5" opacity="0.4">
+            <animate
+              attributeName="d"
+              dur="1.8s"
+              repeatCount="indefinite"
+              values="M125 30 Q115 15 125 5; M125 30 Q135 15 125 5; M125 30 Q115 15 125 5"
+            />
+          </path>
+        </g>
+      </svg>
+      <span class="material-symbols-outlined cart">shopping_cart</span>
+
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <span class="material-symbols-outlined">home</span
+            ><a href="#" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <span class="material-symbols-outlined">local_pizza</span>
+            <a href="#" class="nav__link">Menu</a>
+          </li>
+          <li class="nav__item">
+            <span class="material-symbols-outlined">call</span
+            ><a href="#" class="nav__link">Contacto</a>
+          </li>
+        </ul>
+        <ul class="nav__list-login">
+          <li class="nav__item">
+            <picture class="picture__item">
+              <img
+                id="profile__img"
+                src="Src/profilesmall.jpg"
+                alt="profile photo"
+              /> </picture
+            ><a class="nav__link" href="#">perfil</a>
+          </li>
+          <li class="nav__item">
+            <span class="material-symbols-outlined">logout</span
+            ><a class="nav__link" href="#">cerrar sesión</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hero class="hero">
+      <div class="main__promo">
+        <img class="promo__pizza" src="Src/promo.png" alt="promo de pizza" />
+      </div>
+      <div class="Encabezado">
+        <img src="Src/Luigis-logo.png" alt="luigis logo" />
+        <p class="hero__parragraph">Cada rebanada es una obra maestra</p>
+      </div>
+      <div class="promo1">
+        <img src="Src/promo1.png" alt="pizza margarita" />
+      </div>
+      <div class="promo2">
+        <img src="Src/promo2.png" alt="pizza vegetariana" />
+      </div>
+    </hero>
+    <main class="main__content">
+      <header class="header">
+        <h1>Luigi's pizza</h1>
+        <h4>Menu</h4>
+        <span class="material-symbols-outlined">local_pizza</span>
+      </header>
+      <div class="menu">
+        <img src="Src/menu.png" alt="Menu de pizzas" />
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <span class="material-symbols-outlined">call</span>
+          <a href="#">Contacto </a>
+        </li>
+        <li class="footer__item">
+          <span class="material-symbols-outlined"> person_raised_hand </span
+          ><a href="#">FQ</a>
+        </li>
+      </ul>
+      <h5>Todos los derechos reservados</h5>
+    </footer>
+  </body>
+</html>

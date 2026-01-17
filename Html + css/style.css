@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg-color: linear-gradient(to bottom,#103783, #9bafd9);
+  --header-color: #c1121f;
+  --border-color: #aa0c16;
+  --hover-color:#FDF0D5;
+  --main-header-color: #003049;
+  --text-color:rgb(255, 123, 0);
+    
+}
+body {
+  background: var(--bg-color);
+  font-family: pizza;
+  display: flex;
+  flex-direction: column;
+}
+.header__nav {
+  display: none;
+  background-color: var(--header-color);
+  min-height: 100dvh;
+}
+
+.main__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(0.5rem, 0.8rem, 1rem);
+  height: clamp(15dvh, 20%, 30dvh);
+  background-color: var(--header-color);
+  overflow: hidden;
+  box-shadow: 0 0 20px #000;
+  
+
+}
+.header__logo {
+  width: clamp(3rem, 4rem, 5rem);
+  max-height: fit-content;
+  transition: rotate 2s, scale 1s;
+}
+.material-symbols-outlined.menu {
+  font-size: 2rem;
+  user-select: none;
+  transition: scale .5s;
+}
+.material-symbols-outlined.cart {
+  font-size: 2rem;
+  user-select: none;
+  transition: scale .5s;
+}
+.header_menu {
+  position: relative;
+}
+
+#header__checkbox {
+  position: absolute;
+  display: none;
+}
+.picture__item {
+ width: clamp(2rem, 50%, 3rem); 
+ height: fit-content;
+}
+.nav__link{
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+.main__header:has(#header__checkbox:checked) {
+  flex-direction: column;
+  width: 40dvw;
+  justify-content: start;
+  gap: 2rem;
+  height: 100dvh;
+  position: fixed;
+  z-index: 999;
+}
+.main__header:has(#header__checkbox:checked) .header__nav {
+  display: flex;
+  width: inherit;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2.5rem;
+}
+.main__header:has(#header__checkbox:checked) .header__logo {
+  min-height: fit-content;
+}
+#profile__img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.main__header:has(#header__checkbox:checked) .nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.main__header:has(#header__checkbox:checked) + .hero{
+  margin: 0;
+}
+
+.main__header:has(#header__checkbox:checked) .nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  padding: .7rem;
+  transition: scale .5s;
+  text-transform: uppercase;
+}
+/*------------Nav pseudo clases-----------*/
+.nav__item:hover{
+    background-color: var(--border-color);
+    scale: 1.2;
+}
+.header__logo:hover {
+  scale: 1.2;
+  rotate: 360deg;
+}
+.material-symbols-outlined.menu:hover{
+  scale: 1.2;
+}
+.material-symbols-outlined.cart:hover{
+  scale: 1.2;
+} 
+/*---------Hero Section--------*/
+.hero{
+  display: grid;
+    min-height: 100dvh;
+  grid-template-columns: repeat(fit-content, minmax(100px, 1fr));
+  grid-template-areas: "main-promo main-promo" "encabezado encabezado"
+  "promo2 promo3";
+  justify-content: center;
+
+  margin-top: .5rem;
+}
+.main__promo{
+  grid-area: main-promo;
+  display: flex;
+  padding: .5rem;
+
+
+}
+.promo__pizza{
+  width: 100%;
+  height: auto;
+  border-radius: 3rem;
+  margin: auto;
+}
+.Encabezado{
+  grid-area: encabezado;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--header-color);
+  padding: .7rem;
+  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: 0 0 20px #000;
+  text-wrap: pretty;
+  color: var(--text-color);
+  height: fit-content;
+}
+.Encabezado img{
+  filter: drop-shadow(0 0 5px #000);
+  height: 120px;
+  margin-bottom: 1rem;
+}
+.promo1{
+  grid-area: promo2;
+  
+  padding: .3rem;
+
+}
+.promo1,.promo2{
+  animation-name: mostrar;
+  view-timeline-name: --aparicion;
+  animation-fill-mode: both;
+  animation-timeline: --aparicion;
+  animation-range: entry 25% cover 40%;
+}
+
+
+.promo2{
+  grid-area: promo3;
+   padding: .3rem;
+   
+}
+.promo2 img,.promo1 img{
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  transition: scale .5s;
+  box-shadow: 0 0 10px #000
+}
+
+/*---------pseudo clases hero-------------*/
+.promo2 img:hover,.promo1 img:hover{
+  scale: 1.1;
+}
+@keyframes mostrar {
+  0%{
+    scale: 20%;
+    opacity: 0
+  }
+  100%{
+    scale: 100% ;
+    opacity: 1;
+  }
+}
+/*-----------main-----------*/
+.main__content{
+  display: grid;
+  grid-template-columns: repeat(fit-content, minmax(100px,1fr));
+  grid-template-areas: "header"
+  "menu";
+
+}
+.header{
+  display: flex;
+  background-color: var(--main-header-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color) ;
+  padding: 1rem;
+  box-shadow: 0 0 20px #000;
+  position: relative;
+  z-index: 990;
+  text-wrap: balance;
+  text-align: center;
+
+}
+.header h4{
+  margin: .5rem 0;
+  font-size: 1.5rem;
+}
+
+
+.menu img{
+  width: 100%;
+  height: auto;
+}
+/*-------footer-----*/
